@@ -14,11 +14,13 @@ class Myapp extends StatefulWidget {
 class _MyappState extends State<Myapp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Cd());
+    return MaterialApp(
+      home: Cd(),
+    );
   }
 }
 
-//create new class for "home" property of MaterialApp()
+// the Cd class
 class Cd extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -27,34 +29,26 @@ class Cd extends StatelessWidget {
         body: Container(
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Center(
-                        child: Container(
-                      child: Image.asset(
-                        'cd_example.png',
-                        width: MediaQuery.of(context).size.width * 0.4,
-                        height: MediaQuery.of(context).size.height * 0.4,
-                      ),
-                      margin: const EdgeInsets.all(10),
-                      padding: const EdgeInsets.all(10),
-
-                      width: MediaQuery.of(context).size.width * 0.4,
-                      height: MediaQuery.of(context).size.height * 0.4,
-                      //BoxShadow(color: Colors.green, spreadRadius: 3)
-                      decoration: BoxDecoration(
-                          color: const Color(0xff393e46),
-                          borderRadius: BorderRadius.circular(15)),
-                    )),
+              Image.asset('cd_example.png'),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: FittedBox(
+                  fit: BoxFit.cover,
+                  child: Text(
+                    "cool cd ",
+                    style: TextStyle(fontSize: 18),
                   ),
-                ],
+                ),
               ),
             ],
           ),
+          margin: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
+          width: MediaQuery.of(context).size.width * 0.3,
+          height: MediaQuery.of(context).size.width * 0.3,
+          decoration: BoxDecoration(
+              color: const Color(0xff393e46),
+              borderRadius: BorderRadius.circular(15)),
         ));
   }
 }
