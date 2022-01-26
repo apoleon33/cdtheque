@@ -24,9 +24,13 @@ home = -> animate()###
 class Cd
     constructor: (@name, @author, @publishDate, @category, @songs, @icon) ->
 
-    renderCd = () -> # ugly ass reactjs from wish
+    renderCd :-> # ugly ass reactjs from wish
         main = document.getElementById "main_box"
         main.innerHTML = "<div id=" + @name + "></div>"
+        generalBox = document.createElement "div"
+        generalBox.id = @name
+        main.appendChild generalBox
+
         albumBox = document.getElementById @name
 
         # the icon of the cd
@@ -35,8 +39,13 @@ class Cd
         cdIcon.id = @name + "Icon"
         cdIcon.class = "icon"
 
-        #description of the album:
+        # description of the album:
         cdName = document.createElement "h1"
+        cdName.textContent = @name
+
+        # actually append alle those elements
+        albumBox.appendChild cdName
+        albumBox.appendChild cdIcon
 
 
 
@@ -68,6 +77,6 @@ clearThree = ->
 
 # create all album
 # UGLY AS FUCK
-
-
+astroworld = new Cd "Astroworld", "Travis Scott", 2018, "Rap", "ui tkt", "https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg"
+astroworld.renderCd()
 #home()
