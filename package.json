@@ -1,0 +1,32 @@
+{
+  "name": "cdtheque",
+  "version": "0.0.1",
+  "description": "my cd collection",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-scss": "cd static/css && sass main.scss style.css",
+    "compile-coffee":"cd static/js && coffee -b -c index.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apoleon33/cdtheque.git"
+  },
+  "keywords": [
+    "cd"
+  ],
+  "author": "apoleon33",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/apoleon33/cdtheque/issues"
+  },
+  "homepage": "https://github.com/apoleon33/cdtheque#readme",
+  "dependencies": {
+    "coffeescript": "^2.6.1",
+    "sass": "^1.49.0"
+  }
+}
