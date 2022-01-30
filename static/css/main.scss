@@ -1,0 +1,39 @@
+@import "_colors";
+
+body {
+  background-color: $bgPrimary;
+  color: $textSecondary;
+  margin: 0;
+  padding: 1;
+  font-size: 16px;
+
+  main {
+    margin-left: 5rem;
+    padding: 1em;
+
+    div {
+      background-color: $bg3;
+      border-radius: 25px;
+      padding: 0.5rem;
+
+      .icon {
+        border-radius: 25px;
+        width: 5rem;
+        height: 5rem;
+        vertical-align: middle;
+      }
+    }
+
+    div:hover {
+        background-color: $bg4;
+    }
+  }
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: $bgSecondary;
+}
