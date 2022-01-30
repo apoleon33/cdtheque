@@ -8,24 +8,29 @@ body {
   font-size: 16px;
 
   main {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column-reverse;
     margin-left: 5rem;
     padding: 1em;
 
     div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-content: flex-start;
+
       background-color: $bg3;
       border-radius: 25px;
-      padding: 0.5rem;
+      padding: 1rem;
 
       .icon {
         border-radius: 25px;
         width: 5rem;
         height: 5rem;
         vertical-align: middle;
+        padding-right: 1em;
       }
-    }
-
-    div:hover {
-        background-color: $bg4;
     }
   }
 }
@@ -36,4 +41,8 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
     background: $bgSecondary;
+}
+
+div:hover {
+  background-color: $bg4;
 }
