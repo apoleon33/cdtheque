@@ -1,8 +1,9 @@
-@import "_colors";
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 body {
   background-color: $bgPrimary;
-  color: $textSecondary;
+  color: $textPrimary;
   margin: 0;
   padding: 1;
   font-size: 16px;
@@ -10,39 +11,68 @@ body {
   main {
     display: flex;
     flex-flow: row wrap;
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin-left: 5rem;
-    padding: 1em;
+
+    padding-left: 1em;
+    padding-right: 1em;
 
     div {
+      font-family: "Roboto", serif;
+
       display: flex;
       flex-direction: row;
       align-items: center;
       align-content: flex-start;
 
-      background-color: $bg3;
-      border-radius: 25px;
-      padding: 1rem;
+      background-color: $bgPrimary;
+      transition: 600ms;
+
+      border-bottom: solid $textSecondary;
 
       .icon {
+        animation: turning 3s linear;
+        animation-iteration-count: infinite;
         border-radius: 25px;
-        width: 5rem;
-        height: 5rem;
+        width: $originalIconWIdthHeight;
+        height: $originalIconWIdthHeight;
         vertical-align: middle;
         padding-right: 1em;
+        padding: 1em;
+      }
+
+      .boxText {
+        display: flex;
+        flex-direction: column;
+        border-bottom: none;
+        padding: 0;
+
+        filter: grayscale(100%) opacity(0.7);
       }
     }
   }
 }
 
 body::-webkit-scrollbar {
-    width: 0.25rem;
+  width: 0.25rem;
 }
 
 body::-webkit-scrollbar-track {
-    background: $bgSecondary;
+  background: $bgSecondary;
 }
 
-div:hover {
-  background-color: $bg4;
+div:hover .icon {
+  width: $originalIconWIdthHeight + 2rem;
+  height: $originalIconWIdthHeight + 2rem;
+  animation: turning 3s linear;
+}
+
+div:hover .boxText {
+  filter: grayscale(0%) opacity(1);
+}
+
+@keyframes turning {
+  100% {
+    transform: rotate(360deg);
+  }
 }
