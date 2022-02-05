@@ -17,7 +17,7 @@ body {
     padding-left: 1em;
     padding-right: 1em;
 
-    div {
+    .generalBox {
       font-family: "Roboto", serif;
 
       display: flex;
@@ -31,8 +31,8 @@ body {
       border-bottom: solid $textSecondary;
 
       .icon {
-        animation: turning 3s linear;
-        animation-iteration-count: infinite;
+        animation: turning 3s linear infinite;
+        
         border-radius: 25px;
         width: $originalIconWIdthHeight;
         height: $originalIconWIdthHeight;
@@ -46,9 +46,24 @@ body {
         flex-direction: column;
         border-bottom: none;
         padding: 0;
+        text-align: justify;
 
         filter: grayscale(100%) opacity(0.7);
+
+        
       }
+
+      .btn{
+        display: block;
+        background-color: $bgPrimary;
+        border: none;
+        
+        .bi::before{
+          color: $bg3;
+        }
+      }
+
+      button:last-of-type{margin-left: auto;}
     }
   }
 }
@@ -56,18 +71,16 @@ body {
 body::-webkit-scrollbar {
   width: 0.25rem;
 }
-
 body::-webkit-scrollbar-track {
   background: $bgSecondary;
 }
 
-div:hover .icon {
+.generalBox:hover .icon {
   width: $originalIconWIdthHeight + 2rem;
   height: $originalIconWIdthHeight + 2rem;
-  animation: turning 3s linear;
+  animation: turning 3s linear infinite;
 }
-
-div:hover .boxText {
+.generalBox:hover .boxText {
   filter: grayscale(0%) opacity(1);
 }
 

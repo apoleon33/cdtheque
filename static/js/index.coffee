@@ -5,6 +5,7 @@ class Cd
         main = document.getElementById "main_box"
         generalBox = document.createElement "div"
         generalBox.id = @name
+        generalBox.classList.add "generalBox"
         main.appendChild generalBox
 
         albumBox = document.getElementById @name
@@ -33,7 +34,13 @@ class Cd
         boxForText.appendChild cdName
         boxForText.appendChild cdArtist
 
-
+        # button to develop every cd
+        expandButton = document.createElement "button"
+        expandButton.id = @name + "Expand"
+        expandButton.classList.add "btn"
+        albumBox.appendChild expandButton
+        expandButton = document.getElementById expandButton.id
+        expandButton.innerHTML = """<i class="bi bi-arrow-down-square-fill" style="font-size: 2rem; color: cornflowerblue;"></i>"""
 
 class Track
     constructor: (@author, @length, @place) ->
