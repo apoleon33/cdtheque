@@ -46,10 +46,11 @@
     margin-left:1rem;
 }
 
-.nav-link svg {
+.nav-link i {
     width: 2rem;
     min-width: 2rem;
     margin: 0 1.5rem;
+    font-size: 2rem;
 }
 .fa{
     transition: 600ms;
