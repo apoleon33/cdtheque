@@ -7,7 +7,6 @@
 }
 
 .navbar{
-
     position: fixed;
     background-color: var(--bg-primary);
     transition: width 200ms ease;
@@ -74,6 +73,7 @@
     main{
         margin:0;
     }
+
 }
 
 @media only screen and (min-width:600px) {
@@ -90,4 +90,5 @@
     .navbar:hover .link-text {
         display:inline;
     }
+
 }
