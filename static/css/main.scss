@@ -39,7 +39,6 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        animation: turning 3s linear infinite;
 
         #cdHole{
           border-radius: 100px;
@@ -84,6 +83,16 @@ body{
       }
     }
   }
+}
+
+.turning{
+  animation: turning 3s linear infinite;
+  animation-play-state: running;
+}
+
+.notTurning{
+  animation: turning 3s linear infinite;
+  animation-play-state: paused;
 }
 
 @keyframes turning {

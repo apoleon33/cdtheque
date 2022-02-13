@@ -29,7 +29,7 @@
 	</nav>
 	<main id="main_box">
 		<div id="boxAlbum">
-			<div id="image">
+			<div id="image" class="turning">
 				<div id="cdHole"></div>
 			</div>
 			<div id="BoxText">
@@ -38,13 +38,13 @@
 			</div>
 			<div id="arrowContainer">
 				<i class="bi bi-skip-backward-fill arrow" width="32" height="32"></i>
-				<i class="bi bi-pause-fill pause"></i>
+				<i id="pausePlay" class="bi bi-pause-fill pause" onclick="playPause()"></i>
 				<i class="bi bi-skip-forward-fill arrow" width="32" height="32"></i>
 			</div>
 		</div>
 		<div id="chooseAlbum">
-
 		</div>
 	</main>
+	<script src="static/js/index.js"></script>
 </body>
 </html>

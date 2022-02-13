@@ -1,3 +1,5 @@
+pauseButton = false
+
 class Cd
     constructor: (@name, @author, @publishDate, @category, @songs, @icon) ->
 
@@ -63,7 +65,23 @@ class Track
 astroworld = new Cd "Astroworld", "Travis Scott", 2018, "Rap", "ui tkt", "https://findicons.com/files/icons/45/blend/512/cd.png"
 znother = new Cd "ui", "mayber", 45, "metal", "jspckoa", "https://findicons.com/files/icons/45/blend/512/cd.png"
 lastOne = new Cd "another one", "by probably somebody", 727, "cool nah", "idk wtf is that", "https://findicons.com/files/icons/45/blend/512/cd.png"
-astroworld.renderCd()
-znother.renderCd()
-lastOne.renderCd()
-#home()
+
+playPause= ->
+    buttonPlayPause = document.getElementById "pausePlay"
+    cdTurning = document.getElementById "image"
+    if pauseButton 
+        # if the pause button is on screen
+        buttonPlayPause.classList.remove 'bi-pause-fill'
+        buttonPlayPause.classList.add 'bi-play-fill'
+
+        cdTurning.classList.remove "turning"
+        cdTurning.classList.add "notTurning"
+        pauseButton = false
+    else
+        # if its the play button
+        buttonPlayPause.classList.remove 'bi-play-fill'
+        buttonPlayPause.classList.add 'bi-pause-fill'
+        
+        cdTurning.classList.add "turning"
+        cdTurning.classList.remove "notTurning"
+        pauseButton = true
