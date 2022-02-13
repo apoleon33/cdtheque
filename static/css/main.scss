@@ -1,73 +1,6 @@
 @import "variables";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-body {
-  background-color: $bgPrimary;
-  color: $textPrimary;
-  margin: 0;
-  padding: 1;
-  font-size: 16px;
-
-  main {
-    display: flex;
-    flex-flow: row wrap;
-    flex-direction: column;
-    margin-left: 5rem;
-
-    padding-left: 1em;
-    padding-right: 1em;
-
-    .generalBox {
-      font-family: "Roboto", serif;
-
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      align-content: flex-start;
-
-      background-color: $bgPrimary;
-      transition: 600ms;
-
-      border-bottom: solid $textSecondary;
-
-      .icon {
-        animation: turning 3s linear infinite;
-        
-        border-radius: 25px;
-        width: $originalIconWIdthHeight;
-        height: $originalIconWIdthHeight;
-        vertical-align: middle;
-        padding-right: 1em;
-        padding: 1em;
-      }
-
-      .boxText {
-        display: flex;
-        flex-direction: column;
-        border-bottom: none;
-        padding: 0;
-        text-align: justify;
-
-        filter: grayscale(100%) opacity(0.7);
-
-        
-      }
-
-      .btn{
-        display: block;
-        background-color: $bgPrimary;
-        border: none;
-        
-        .bi::before{
-          color: $bg3;
-        }
-      }
-
-      button:last-of-type{margin-left: auto;}
-    }
-  }
-}
-
 body::-webkit-scrollbar {
   width: 0.25rem;
 }
@@ -75,13 +8,82 @@ body::-webkit-scrollbar-track {
   background: $bgSecondary;
 }
 
-.generalBox:hover .icon {
-  width: $originalIconWIdthHeight + 2rem;
-  height: $originalIconWIdthHeight + 2rem;
-  animation: turning 3s linear infinite;
-}
-.generalBox:hover .boxText {
-  filter: grayscale(0%) opacity(1);
+body{
+  background-color: $bgPrimary;
+  color: $textPrimary;
+  margin: 0;
+  padding: 1;
+  font-size: 16px;
+
+  main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+
+    #boxAlbum{
+      display: flex;
+      flex-flow: row wrap;
+      flex-direction: column;
+      width: 20em;
+      padding: 0.5em;
+      background-color: $bgSecondary;
+      border-radius: 35px;
+
+      #image{
+        background-image: url("https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg");
+        width: 300px;
+        height: 300px;
+        align-self: center;
+        border-radius: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: turning 3s linear infinite;
+
+        #cdHole{
+          border-radius: 100px;
+          background-color: $bgSecondary;
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+      #BoxText{
+        width: 300px;
+        height: 75px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        padding: 1em;
+        padding-bottom: 0;
+        h1{
+          margin:0;
+          color: $textPrimary;
+        }
+        h2{
+          margin: 0;
+          color: $textSecondary;
+        }
+      }
+
+      #arrowContainer{
+        display: flex;
+        flex-direction: row;
+        width: 20em;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+
+        .arrow::before{
+          font-size: 3rem;
+        }
+        .pause::before{
+          font-size: 4rem;
+        }
+      }
+    }
+  }
 }
 
 @keyframes turning {
