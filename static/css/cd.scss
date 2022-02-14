@@ -1,4 +1,4 @@
-@mixin cd ($nameCd, $primaryColor, $secondaryColor){
+@mixin cd ($nameCd, $primaryColor, $secondaryColor, $icon){
     .primaryColor#{$nameCd}{
         background-color: $primaryColor;
     }
@@ -6,7 +6,11 @@
     .secondaryColor#{$nameCd}{
         background-color: $secondaryColor;
     }
+
+    .image#{$nameCd}{
+        background-image: url($icon);
+    }
 }
 
-@include cd("example", #000000, #3E065F);
-@include cd("dark",#000000, #3D0000 )
+@include cd("example", #000000, #3E065F, "https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg");
+@include cd("dark",#950101, #3D0000, "https://images.wave.fr/images//astroworld.jpg")

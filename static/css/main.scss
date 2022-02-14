@@ -1,5 +1,6 @@
 @import "variables";
 @import "cd";
+@import "navbar";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 
@@ -14,7 +15,6 @@ body{
   
   color: $textPrimary;
   margin: 0;
-  padding: 1;
   font-size: 16px;
 
   main{
@@ -32,7 +32,6 @@ body{
       border-radius: 35px;
 
       #image{
-        background-image: url("https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg");
         width: 300px;
         height: 300px;
         align-self: center;

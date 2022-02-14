@@ -1,29 +1,23 @@
 pauseButton = false
 primaryColor = ["body"]
-secondaryColor = ["boxAlbum", "cdHole"]
+secondaryColor = ["boxAlbum", "cdHole",  "navLink1", "navLink2","navbar"]
 indexCdList = 0
 
 class Cd
     constructor: (@name, @author) ->
 
-    renderCd: (skip=false, previous=null) ->
+    renderCd: ->
         nameAlbum = document.getElementById "nameAlbum"
         nameArtist = document.getElementById "nameArtist"
         nameAlbum.textContent = @name
         nameArtist.textContent = @author
-        if skip
-            for colors in primaryColor
-                
-                document.getElementById(colors).classList.add "primaryColor"+@name
+        for colors in primaryColor
+            document.getElementById(colors).classList.add "primaryColor"+@name
             
-            for i in secondaryColor
-                document.getElementById(i).classList.add "secondaryColor"+@name
-        else
-            for colors in primaryColor
-                document.getElementById(colors).classList += "primaryColor"+@name
-            
-            for i in secondaryColor
-                document.getElementById(i).classList.add "secondaryColor"+@name 
+        for i in secondaryColor
+            document.getElementById(i).classList.add "secondaryColor"+@name
+        
+        document.getElementById("image").classList.add "image"+@name
 
 
 playPause= ->
@@ -45,7 +39,30 @@ playPause= ->
         cdTurning.classList.add "turning"
         cdTurning.classList.remove "notTurning"
         pauseButton = true
-         
+
+skip =(skip)->
+    for colors in primaryColor
+        document.getElementById(colors).classList.remove "primaryColor"+listCd[indexCdList].name
+
+    for i in secondaryColor
+        document.getElementById(i).classList.remove "secondaryColor"+listCd[indexCdList].name
+    
+    document.getElementById("image").classList.remove "image"+listCd[indexCdList].name
+    
+    if skip
+        indexCdList  += 1
+        if listCd.length == indexCdList
+            indexCdList = 0
+    else
+        indexCdList -= 1
+        if indexCdList < 0
+            indexCdList = listCd.length - 1
+
+    listCd[indexCdList].renderCd()
+
+goBack = ->
+    
+
 example = new Cd "dark", "name of the artist"
 example2 = new Cd "example", "random people ngl"
 listCd = [example, example2]
