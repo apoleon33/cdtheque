@@ -1,15 +1,17 @@
 @import "variables";
+@import "cd";
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-body::-webkit-scrollbar {
-  width: 0.25rem;
-}
-body::-webkit-scrollbar-track {
-  background: $bgSecondary;
-}
 
 body{
-  background-color: $bgPrimary;
+  &::-webkit-scrollbar-track{
+    background: $bgSecondary;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  
   color: $textPrimary;
   margin: 0;
   padding: 1;
@@ -27,7 +29,6 @@ body{
       flex-direction: column;
       width: 20em;
       padding: 0.5em;
-      background-color: $bgSecondary;
       border-radius: 35px;
 
       #image{
@@ -42,7 +43,6 @@ body{
 
         #cdHole{
           border-radius: 100px;
-          background-color: $bgSecondary;
           width: 60px;
           height: 60px;
         }

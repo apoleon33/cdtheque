@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="static/css/navbar.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
 </head>
-<body>
+<body id="body">
 	<script type=text/javascript src="https://threejs.org/build/three.js"></script>
 	<nav class="navbar">
 		<ul class="navbar-nav">
@@ -33,16 +33,14 @@
 				<div id="cdHole"></div>
 			</div>
 			<div id="BoxText">
-				<h1>song</h1>
-				<h2>artist</h2>
+				<h1 id="nameAlbum"></h1>
+				<h2 id="nameArtist"></h2>
 			</div>
 			<div id="arrowContainer">
 				<i class="bi bi-skip-backward-fill arrow" width="32" height="32"></i>
 				<i id="pausePlay" class="bi bi-pause-fill pause" onclick="playPause()"></i>
-				<i class="bi bi-skip-forward-fill arrow" width="32" height="32"></i>
+				<i class="bi bi-skip-forward-fill arrow" width="32" height="32" onclick="skip()" ></i>
 			</div>
-		</div>
-		<div id="chooseAlbum">
 		</div>
 	</main>
 	<script src="static/js/index.js"></script>

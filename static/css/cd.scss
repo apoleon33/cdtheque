@@ -1,0 +1,12 @@
+@mixin cd ($nameCd, $primaryColor, $secondaryColor){
+    .primaryColor#{$nameCd}{
+        background-color: $primaryColor;
+    }
+
+    .secondaryColor#{$nameCd}{
+        background-color: $secondaryColor;
+    }
+}
+
+@include cd("example", #000000, #3E065F);
+@include cd("dark",#000000, #3D0000 )
