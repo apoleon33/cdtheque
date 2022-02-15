@@ -1,7 +1,9 @@
 pauseButton = false
-primaryColor = ["body"]
-secondaryColor = ["boxAlbum", "cdHole",  "navLink1", "navLink2","navbar"]
+primaryColor = ["body", "cdHole"]
+secondaryColor = ["boxAlbum",   "navLink1", "navLink2","navbar"]
+getRandomInt = (max)  -> return Math.floor Math.random() * max 
 indexCdList = 0
+console.log indexCdList
 
 class Cd
     constructor: (@name, @author, @classname) ->
@@ -9,7 +11,11 @@ class Cd
     renderCd: ->
         nameAlbum = document.getElementById "nameAlbum"
         nameArtist = document.getElementById "nameArtist"
-        nameAlbum.textContent = @name
+        console.log @name.length
+        if @name.length > 17
+            nameAlbum.textContent = @name.substring(0,16) + " ..."
+        else
+            nameAlbum.textContent = @name
         nameArtist.textContent = @author
         for colors in primaryColor
             document.getElementById(colors).classList.add "primaryColor"+@classname
@@ -18,7 +24,6 @@ class Cd
             document.getElementById(i).classList.add "secondaryColor"+@classname
         
         document.getElementById("image").classList.add "image"+@classname
-
 
 playPause= ->
     buttonPlayPause = document.getElementById "pausePlay"
@@ -63,7 +68,7 @@ skip =(skip)->
 goBack = ->
     
 # cd list
-astroworld = new Cd "astroworld", "Travis Scott", "astroworld"
+astroworld = new Cd "Astroworld", "Travis Scott", "astroworld"
 birdsInTheTrapSingMcKnight = new Cd "Birds In The Trap Sing Mcknight", "Travis Scott", "birdsInTheTrapSingMcKnight"
 blackAlbum = new Cd "The Black Album", "Metallica", "blackAlbum"
 civilisation = new Cd "Civilisation", "Orelsan", "civilisation"
@@ -85,4 +90,5 @@ listCd = [astroworld,
          theGrayChapter,
          weAreNotYourKind
          ]
+indexCdList = getRandomInt listCd.length
 listCd[indexCdList].renderCd()
