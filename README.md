@@ -1,1 +1,2 @@
 # Cdtheque
+[![wakatime](https://wakatime.com/badge/user/f30b1401-c84a-455c-a952-90c59a25605e/project/7a4185b9-3d68-44c4-aa2f-f9aa6e846af7.svg)](https://wakatime.com/badge/user/f30b1401-c84a-455c-a952-90c59a25605e/project/7a4185b9-3d68-44c4-aa2f-f9aa6e846af7)
