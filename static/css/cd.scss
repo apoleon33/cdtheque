@@ -1,16 +1,30 @@
+$transitionDelay: 600ms;
+
 @mixin cd ($nameCd, $primaryColor, $secondaryColor, $icon){
+
     .primaryColor#{$nameCd}{
         background-color: $primaryColor;
+        transition: $transitionDelay;
     }
 
     .secondaryColor#{$nameCd}{
         background-color: $secondaryColor;
+        transition: $transitionDelay;
+        
     }
 
     .image#{$nameCd}{
-        background-image: url($icon);
+        background-image: url("../assets/#{$icon}");
     }
 }
 
-@include cd("example", #000000, #3E065F, "https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg");
-@include cd("dark",#950101, #3D0000, "https://images.wave.fr/images//astroworld.jpg")
+@include cd("astroworld",#2A3D54 , #a37033, "astroworld.jpg");
+@include cd("birdsInTheTrapSingMcKnight",#282225 ,#b48885,"BirdsInTheTrapSingMcKnight.jpg");
+@include cd("rodeo",#ffffff,#2B292B, "rodeo.jpg");
+@include cd("blackAlbum",#010B0B, #464949, "blackAlbum.jpg");
+@include cd("civilisation",#2D769A, #B0B4BC, "civilisation.png");
+@include cd("evilEmpire", #F1BF3A, #C63230, "evilEmpire.jpg");
+@include cd("meliora", #0A0C0B,#202F29, "meliora.jpg");
+@include cd("rageAgainstTheMachine",#16272B, #BDD8D7, "rageAgainstTheMachine.jpg" );
+@include cd("theGrayChapter",#010102, #776E66,"theGrayChapter.jpg");
+@include cd("weAreNotYourKind",#040307,#50406B, "weAreNotYourKind.jpg")

@@ -4,7 +4,7 @@ secondaryColor = ["boxAlbum", "cdHole",  "navLink1", "navLink2","navbar"]
 indexCdList = 0
 
 class Cd
-    constructor: (@name, @author) ->
+    constructor: (@name, @author, @classname) ->
 
     renderCd: ->
         nameAlbum = document.getElementById "nameAlbum"
@@ -12,12 +12,12 @@ class Cd
         nameAlbum.textContent = @name
         nameArtist.textContent = @author
         for colors in primaryColor
-            document.getElementById(colors).classList.add "primaryColor"+@name
+            document.getElementById(colors).classList.add "primaryColor"+@classname
             
         for i in secondaryColor
-            document.getElementById(i).classList.add "secondaryColor"+@name
+            document.getElementById(i).classList.add "secondaryColor"+@classname
         
-        document.getElementById("image").classList.add "image"+@name
+        document.getElementById("image").classList.add "image"+@classname
 
 
 playPause= ->
@@ -42,12 +42,12 @@ playPause= ->
 
 skip =(skip)->
     for colors in primaryColor
-        document.getElementById(colors).classList.remove "primaryColor"+listCd[indexCdList].name
+        document.getElementById(colors).classList.remove "primaryColor"+listCd[indexCdList].classname
 
     for i in secondaryColor
-        document.getElementById(i).classList.remove "secondaryColor"+listCd[indexCdList].name
+        document.getElementById(i).classList.remove "secondaryColor"+listCd[indexCdList].classname
     
-    document.getElementById("image").classList.remove "image"+listCd[indexCdList].name
+    document.getElementById("image").classList.remove "image"+listCd[indexCdList].classname
     
     if skip
         indexCdList  += 1
@@ -62,8 +62,27 @@ skip =(skip)->
 
 goBack = ->
     
+# cd list
+astroworld = new Cd "astroworld", "Travis Scott", "astroworld"
+birdsInTheTrapSingMcKnight = new Cd "Birds In The Trap Sing Mcknight", "Travis Scott", "birdsInTheTrapSingMcKnight"
+blackAlbum = new Cd "The Black Album", "Metallica", "blackAlbum"
+civilisation = new Cd "Civilisation", "Orelsan", "civilisation"
+evilEmpire = new Cd "Evil Empire", "Rage against The Machine", "evilEmpire"
+meliora = new Cd "Meliora", "Ghost", "meliora"
+rageAgainstTheMachine = new Cd "Rage Against The Machine", "Rage Against The Machine", "rageAgainstTheMachine"
+rodeo = new Cd "Rodeo", "Travis Scott", "rodeo"
+theGrayChapter = new Cd "The Gray Chapter", "Slipknot", "theGrayChapter"
+weAreNotYourKind = new Cd "We Are Not Your Kind", "Slipknot", "weAreNotYourKind"
 
-example = new Cd "dark", "name of the artist"
-example2 = new Cd "example", "random people ngl"
-listCd = [example, example2]
+listCd = [astroworld, 
+         birdsInTheTrapSingMcKnight,
+         blackAlbum,
+         civilisation,
+         evilEmpire,
+         meliora,
+         rageAgainstTheMachine,
+         rodeo,
+         theGrayChapter,
+         weAreNotYourKind
+         ]
 listCd[indexCdList].renderCd()
