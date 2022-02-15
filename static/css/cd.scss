@@ -3,8 +3,8 @@ $transitionDelay: 600ms;
 @mixin cd ($nameCd, $primaryColor, $secondaryColor, $icon){
 
     .primaryColor#{$nameCd}{
-        background-color: $primaryColor;
         transition: $transitionDelay;
+        color: $primaryColor;
     }
 
     .secondaryColor#{$nameCd}{
@@ -14,7 +14,9 @@ $transitionDelay: 600ms;
     }
 
     .image#{$nameCd}{
-        background-image: url("../assets/#{$icon}");
+        background-color: $primaryColor;
+        background: url("../assets/#{$icon}") no-repeat center center fixed; 
+        background-size: cover;
     }
 }
 

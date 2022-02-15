@@ -3,6 +3,7 @@
 .navbar{
     position: fixed;
     transition: width 200ms ease;
+    background-color: $transparent;
 
     .navbar-nav{
         list-style: none;

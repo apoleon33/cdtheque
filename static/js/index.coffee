@@ -1,6 +1,6 @@
 pauseButton = false
-primaryColor = ["body", "cdHole"]
-secondaryColor = ["boxAlbum",   "navLink1", "navLink2","navbar"]
+primaryColor = ["nameAlbum", "nameArtist", "goBack","pausePlay","skip"]
+secondaryColor = ["boxAlbum","cdHole"]
 getRandomInt = (max)  -> return Math.floor Math.random() * max 
 indexCdList = 0
 console.log indexCdList
@@ -24,6 +24,7 @@ class Cd
             document.getElementById(i).classList.add "secondaryColor"+@classname
         
         document.getElementById("image").classList.add "image"+@classname
+        document.getElementById("backgroundImage").classList.add "image"+@classname
 
 playPause= ->
     buttonPlayPause = document.getElementById "pausePlay"
@@ -53,6 +54,7 @@ skip =(skip)->
         document.getElementById(i).classList.remove "secondaryColor"+listCd[indexCdList].classname
     
     document.getElementById("image").classList.remove "image"+listCd[indexCdList].classname
+    document.getElementById("backgroundImage").classList.remove "image"+listCd[indexCdList].classname
     
     if skip
         indexCdList  += 1

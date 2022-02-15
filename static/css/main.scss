@@ -17,6 +17,18 @@ body{
   margin: 0;
   font-size: 16px;
 
+  #backgroundImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    z-index: -1;
+    transition: 1200ms;
+  }
+
   main{
     display: flex;
     align-items: center;
@@ -55,14 +67,8 @@ body{
         justify-content: start;
         padding: 1em;
         padding-bottom: 0;
-        h1{
-          margin:0;
-          color: $textPrimary;
-        }
-        h2{
-          margin: 0;
-          color: $textSecondary;
-        }
+        h1{margin:0;}
+        h2{margin: 0;}
       }
 
       #arrowContainer{
