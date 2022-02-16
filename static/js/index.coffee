@@ -66,11 +66,10 @@ skip =(skip)->
             indexCdList = listCd.length - 1
 
     listCd[indexCdList].renderCd()
-
-goBack = ->
     
 # cd list
 astroworld = new Cd "Astroworld", "Travis Scott", "astroworld"
+bangarang = new Cd "Bangarang", "Skrillex", "bangarang"
 birdsInTheTrapSingMcKnight = new Cd "Birds In The Trap Sing Mcknight", "Travis Scott", "birdsInTheTrapSingMcKnight"
 blackAlbum = new Cd "The Black Album", "Metallica", "blackAlbum"
 civilisation = new Cd "Civilisation", "Orelsan", "civilisation"
@@ -81,7 +80,8 @@ rodeo = new Cd "Rodeo", "Travis Scott", "rodeo"
 theGrayChapter = new Cd "The Gray Chapter", "Slipknot", "theGrayChapter"
 weAreNotYourKind = new Cd "We Are Not Your Kind", "Slipknot", "weAreNotYourKind"
 
-listCd = [astroworld, 
+listCd = [astroworld,
+         bangarang, 
          birdsInTheTrapSingMcKnight,
          blackAlbum,
          civilisation,
