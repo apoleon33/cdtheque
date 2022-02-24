@@ -1,6 +1,6 @@
 {
   "name": "cdtheque",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "my cd collection",
   "main": "index.js",
   "directories": {
@@ -10,7 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile-scss": "cd static/css && sass main.scss style.css",
-    "compile-coffee":"cd static/js && coffee -b -c index.coffee"
+    "compile-coffee": "cd static/js && coffee -b -c index.coffee"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   "homepage": "https://github.com/apoleon33/cdtheque#readme",
   "dependencies": {
     "coffeescript": "^2.6.1",
+    "jimp": "^0.16.1",
     "sass": "^1.49.0"
   }
 }

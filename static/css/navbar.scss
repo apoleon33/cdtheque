@@ -20,14 +20,14 @@
                 display:flex;
                 align-items: center;
                 height:5rem;
-                color: $textPrimary;
+                /* color: $textPrimary; */
                 text-decoration: none;
                 filter: grayscale(100%) opacity(0.7);
                 transition:600ms;
 
                 &:hover{
                     filter: grayscale(0%) opacity(1);
-                    color:$textSecondary;
+                   /* color:$textSecondary; */
                 }
 
                 .link-text{
@@ -72,13 +72,5 @@
         top:0;
         width:5rem;
         height: 100vh;
-
-        &:hover{
-            width:16rem;
-
-            .link-text {
-                display:inline;
-            }
-        }
-   } 
+    } 
 } 
