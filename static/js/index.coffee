@@ -79,12 +79,14 @@ rageAgainstTheMachine = new Cd "Rage Against The Machine", "Rage Against The Mac
 rodeo = new Cd "Rodeo", "Travis Scott", "rodeo"
 theGrayChapter = new Cd "The Gray Chapter", "Slipknot", "theGrayChapter"
 weAreNotYourKind = new Cd "We Are Not Your Kind", "Slipknot", "weAreNotYourKind"
+donda = new Cd "Donda", "Kanye West", "donda"
 
 listCd = [astroworld,
          bangarang, 
          birdsInTheTrapSingMcKnight,
          blackAlbum,
          civilisation,
+         donda,
          evilEmpire,
          meliora,
          rageAgainstTheMachine,
