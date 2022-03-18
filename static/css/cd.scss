@@ -26,9 +26,10 @@ $transitionDelay: 600ms;
 @include cd("rodeo",#ffffff,#2B292B, "rodeo.jpg");
 @include cd("blackAlbum",#010B0B, #464949, "blackAlbum.jpg");
 @include cd("civilisation",#2D769A, #B0B4BC, "civilisation.png");
+@include cd("donda", #383737, #000000, "donda.png");
 @include cd("evilEmpire", #F1BF3A, #C63230, "evilEmpire.jpg");
+@include cd("impera", #907756, #869EB1, "impera.gif");
 @include cd("meliora", #0A0C0B,#202F29, "meliora.jpg");
 @include cd("rageAgainstTheMachine",#16272B, #BDD8D7, "rageAgainstTheMachine.jpg" );
 @include cd("theGrayChapter",#010102, #776E66,"theGrayChapter.jpg");
 @include cd("weAreNotYourKind",#040307,#50406B, "weAreNotYourKind.jpg");
-@include cd("donda", #383737, #000000, "donda.png")

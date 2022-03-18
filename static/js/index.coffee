@@ -73,13 +73,14 @@ bangarang = new Cd "Bangarang", "Skrillex", "bangarang"
 birdsInTheTrapSingMcKnight = new Cd "Birds In The Trap Sing Mcknight", "Travis Scott", "birdsInTheTrapSingMcKnight"
 blackAlbum = new Cd "The Black Album", "Metallica", "blackAlbum"
 civilisation = new Cd "Civilisation", "Orelsan", "civilisation"
+donda = new Cd "Donda", "Kanye West", "donda"
 evilEmpire = new Cd "Evil Empire", "Rage against The Machine", "evilEmpire"
+impera = new Cd "Impera", "Ghost", "impera"
 meliora = new Cd "Meliora", "Ghost", "meliora"
 rageAgainstTheMachine = new Cd "Rage Against The Machine", "Rage Against The Machine", "rageAgainstTheMachine"
 rodeo = new Cd "Rodeo", "Travis Scott", "rodeo"
 theGrayChapter = new Cd "The Gray Chapter", "Slipknot", "theGrayChapter"
 weAreNotYourKind = new Cd "We Are Not Your Kind", "Slipknot", "weAreNotYourKind"
-donda = new Cd "Donda", "Kanye West", "donda"
 
 listCd = [astroworld,
          bangarang, 
@@ -88,6 +89,7 @@ listCd = [astroworld,
          civilisation,
          donda,
          evilEmpire,
+         impera,
          meliora,
          rageAgainstTheMachine,
          rodeo,
