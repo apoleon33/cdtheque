@@ -77,6 +77,7 @@ donda = new Cd "Donda", "Kanye West", "donda"
 evilEmpire = new Cd "Evil Empire", "Rage against The Machine", "evilEmpire"
 impera = new Cd "Impera", "Ghost", "impera"
 meliora = new Cd "Meliora", "Ghost", "meliora"
+myBeautifulDarkTwistedFantasy = new Cd "My Beautiful Dark Twisted Fantasy", "Kanye West", "myBeautiFulFarkTwistedFantasy"
 rageAgainstTheMachine = new Cd "Rage Against The Machine", "Rage Against The Machine", "rageAgainstTheMachine"
 rodeo = new Cd "Rodeo", "Travis Scott", "rodeo"
 theGrayChapter = new Cd "The Gray Chapter", "Slipknot", "theGrayChapter"
@@ -91,6 +92,7 @@ listCd = [astroworld,
          evilEmpire,
          impera,
          meliora,
+         myBeautifulDarkTwistedFantasy
          rageAgainstTheMachine,
          rodeo,
          theGrayChapter,
