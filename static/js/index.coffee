@@ -76,6 +76,7 @@ civilisation = new Cd "Civilisation", "Orelsan", "civilisation"
 donda = new Cd "Donda", "Kanye West", "donda"
 evilEmpire = new Cd "Evil Empire", "Rage against The Machine", "evilEmpire"
 impera = new Cd "Impera", "Ghost", "impera"
+lestWeForget = new Cd "Lest We Forget", "Marilyn Manson", "lestWeForget"
 meliora = new Cd "Meliora", "Ghost", "meliora"
 myBeautifulDarkTwistedFantasy = new Cd "My Beautiful Dark Twisted Fantasy", "Kanye West", "myBeautiFulFarkTwistedFantasy"
 rageAgainstTheMachine = new Cd "Rage Against The Machine", "Rage Against The Machine", "rageAgainstTheMachine"
@@ -91,6 +92,7 @@ listCd = [astroworld,
          donda,
          evilEmpire,
          impera,
+         lestWeForget,
          meliora,
          myBeautifulDarkTwistedFantasy
          rageAgainstTheMachine,
