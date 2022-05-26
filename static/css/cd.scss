@@ -20,6 +20,7 @@ $transitionDelay: 600ms;
     }
 }
 
+@include cd("heartbreak", #CB2C21, #C4CDCC, "808s.png" );
 @include cd("astroworld",#2A3D54 , #a37033, "astroworld.jpg");
 @include cd("bangarang",#970D0F,#C5C6C4,"bangarang.jpg");
 @include cd("birdsInTheTrapSingMcKnight",#282225 ,#b48885,"BirdsInTheTrapSingMcKnight.jpg");
