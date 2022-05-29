@@ -23,7 +23,7 @@ class Cd
         for i in secondaryColor
             document.getElementById(i).classList.add "secondaryColor"+@classname
         
-        document.body.classList.add "image"+@classname
+        document.getElementById("image").classList.add "image"+@classname
         document.getElementById("backgroundImage").classList.add "image"+@classname
 
 playPause= ->
@@ -86,21 +86,21 @@ theGrayChapter = new Cd "The Gray Chapter", "Slipknot", "theGrayChapter"
 weAreNotYourKind = new Cd "We Are Not Your Kind", "Slipknot", "weAreNotYourKind"
 
 listCd = [
-         heartBreak
-         astroworld
-         bangarang
-         birdsInTheTrapSingMcKnight
-         blackAlbum
-         civilisation
-         donda
-         evilEmpire
-         impera
-         lestWeForget
-         meliora
+         heartBreak,
+         astroworld,
+         bangarang, 
+         birdsInTheTrapSingMcKnight,
+         blackAlbum,
+         civilisation,
+         donda,
+         evilEmpire,
+         impera,
+         lestWeForget,
+         meliora,
          myBeautifulDarkTwistedFantasy
-         rageAgainstTheMachine
-         rodeo
-         theGrayChapter
+         rageAgainstTheMachine,
+         rodeo,
+         theGrayChapter,
          weAreNotYourKind
          ]
 indexCdList = getRandomInt listCd.length
